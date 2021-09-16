@@ -1,0 +1,39 @@
+.header
+{
+    padding: 0 5%;
+    background: whitesmoke;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &__logo
+    {
+        align-self: flex-start;
+        width: 150px;
+    }
+    &__search-bar
+    {
+        width: 20%;
+        border: 3px solid $color-primary;
+        border-radius: 20px;
+        margin-left: 40%;
+    }
+    div
+    {
+        position: relative;
+    } 
+    .article
+    {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        background: white;
+        color: $color-secondary;
+        border: 1px solid $color-tertiary;
+        border-radius: 80%;
+        left: 30px;
+        top: 15px;
+    }
+}

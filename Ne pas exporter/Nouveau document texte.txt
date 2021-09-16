@@ -1,0 +1,17 @@
+Projet 5:
+
+4 pages : Vue
+	  Produit
+	  Panier
+	  Validation commande
+
+Produit presentée: Ours en peluche
+Il devra y avoir une option de personnalisation (Qui sera inactive pour le mvp)
+Url API: : http://localhost:3000/api/teddies
+
+Test unitaires ?
+
+Code couleur: 
+violet : #9b62dc
+orange : #ca7b56
+rose : #b06da1

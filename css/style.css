@@ -1,0 +1,49 @@
+.header {
+  padding: 0 5%;
+  background: whitesmoke;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  align-self: flex-start;
+  width: 150px;
+}
+.header__search-bar {
+  width: 20%;
+  border: 3px solid #9B62DC;
+  border-radius: 20px;
+  margin-left: 40%;
+}
+.header div {
+  position: relative;
+}
+.header .article {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  background: white;
+  color: #ca7b56;
+  border: 1px solid #b06da1;
+  border-radius: 80%;
+  left: 30px;
+  top: 15px;
+}
+
+.shop {
+  margin: 0 5%;
+}
+
+.article__img {
+  height: 150px;
+  width: 150px;
+}
+
+* {
+  margin: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
