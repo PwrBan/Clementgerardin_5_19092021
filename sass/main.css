@@ -56,6 +56,8 @@
 .article__img {
   height: 150px;
   width: 150px;
+  -o-object-fit: fill;
+     object-fit: fill;
 }
 
 * {
