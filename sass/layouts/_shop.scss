@@ -1,13 +1,26 @@
 .shop
 {
     margin: 0 5%;
+    display: flex;
+    flex-wrap: wrap;
 }
 .article
 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: whitesmoke;
+    width: 15rem;
+    box-shadow: 2px 2px 5px rgb(95, 95, 95);
+    &__link
+    {
+        margin: 5%;
+    }
     &__img
     {
+        margin: 5px;
         height: 150px;
-        width: 150px;
         object-fit: fill;
     }
 }
