@@ -1,27 +1,36 @@
 .header
 {
     padding: 0 5%;
-    background: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: white;
     &__logo
     {
         align-self: flex-start;
         width: 150px;
+        background: white;
     }
     &__search-bar
     {
+        height: 35px;
         width: 20%;
         border: 3px solid $color-primary;
         border-radius: 20px;
         margin-left: 40%;
+        background: whitesmoke;
+        box-shadow: inset 2px 2px 5px #d6d6d6;
+    }
+    &__cart
+    {
+        background: white;
     }
     div
     {
         position: relative;
+        background: white;
     } 
-    .article
+    .panier
     {
         display: flex;
         align-content: center;
