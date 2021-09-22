@@ -9,7 +9,6 @@ function product(value)
         var elt_Img = document.createElement("img");
         var elt_Div = document.createElement("div");
         var elt_H2 = document.createElement("h2");
-        /*var elt_Description = document.createElement("p");*/
         var elt_Price = document.createElement("p");
 
                 elt_Link.classList.add("article__link");
@@ -18,7 +17,6 @@ function product(value)
                 elt_Img.classList.add("article__img");
                 elt_Div.classList.add("article__legende");
                 elt_H2.classList.add("article__name");
-                /*elt_Description.classList.add("article__description");*/
                 elt_Price.classList.add("article__price");
 
                 elt_Img.setAttribute("alt", "Ours en peluche");
@@ -31,11 +29,9 @@ function product(value)
                 elt_DivImg.appendChild(elt_Img);
                 elt_Article.appendChild(elt_Div);
                 elt_Div.appendChild(elt_H2);
-                /*elt_Article.appendChild(elt_Description);*/
                 elt_Div.appendChild(elt_Price)    
 
                     elt_H2.textContent = element["name"];
-                    /*elt_Description.textContent = element["description"];*/
                     elt_Price.textContent = element["price"] + "€";
     });
 }

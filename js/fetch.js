@@ -6,7 +6,7 @@ fetch("http://localhost:3000/api/teddies")
     })
     .then(function teddys_Object(value) {
         console.log(value[0]._id);
-        return product(value);
+        product(value);
     })
     .catch(function(err) {
         console.log(err)
