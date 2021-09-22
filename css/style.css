@@ -12,10 +12,10 @@
 }
 .header__search-bar {
   height: 35px;
-  width: 20%;
+  width: 15rem;
   border: 3px solid #9B62DC;
   border-radius: 20px;
-  margin-left: 40%;
+  margin: 0 2rem 0 40%;
   background: whitesmoke;
   box-shadow: inset 2px 2px 5px #d6d6d6;
 }
@@ -83,7 +83,16 @@
   margin-top: 5px;
 }
 
-* {
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+  padding: 1rem 8rem;
+  height: 8rem;
+  background: whitesmoke;
+}
+
+body {
   margin: 0;
   background: white;
 }
