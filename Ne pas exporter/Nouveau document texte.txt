@@ -15,3 +15,12 @@ Code couleur:
 violet : #9b62dc
 orange : #ca7b56
 rose : #b06da1
+
+reste a faire : 
+fonction retirer du panier
+formulaire commande
+page confirmation
+personnalisation
+Nombre d'article dans panier
+css
+metre un loader de 2s sur le panier

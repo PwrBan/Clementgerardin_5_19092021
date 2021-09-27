@@ -8,17 +8,16 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-
     <title>Ours en peluches</title>
 </head>
 <body>
     <header class="header">
-        <a href="index.html"><img src="images/logo/orinoco_logo.svg" alt="logo orinoco" class="header__logo"></a>
+        <a href="index.html"><img src="img/logo/orinoco_logo.svg" alt="logo orinoco" class="header__logo"></a>
         <input type="search" class="header__search-bar">
         <div>
-            <a href="">
-                <img src="images/logo/chariot_logo.svg" alt="logo chariot d'oronico" class="header__cart">
-                <span class="panier">0</span>
+            <a href="cart.html">
+                <img src="img/logo/chariot_logo.svg" alt="logo chariot d'oronico" class="header__cart">
+                <span class="panier"></span>
             </a>
         </div>
     </header>
@@ -30,15 +29,14 @@
         <em class="product__price"></em>
         <p class="product__description"></p>
 
-        <button class="product__order">Commander</button>
+        <button class="product__order" data-name data-id>Ajouter au panier</button>
     </article>
 
     <footer>
         
     </footer>
-
-    <script src="js/cookie.js"></script>
-    <script src="js/fetch.js"></script>
-    <script src="js/getParams.js"></script>
+    <script src="js/get-order.js"></script>
+    <script src="js/get-order.js"></script>
+    <script src="js/get-params.js"></script>
 </body>
 </html>

@@ -1,13 +1,22 @@
 fetch("http://localhost:3000/api/teddies")
-    .then(function(res) {
+    .then(res => {
         if(res.ok) {
             return res.json();
         }
     })
-    .then(function teddys_Object(value) {
+    .then(value => {
         console.log(value[0]._id);
-        product(value);
+        createHomepageHtmlElt(value);
     })
-    .catch(function(err) {
-        console.log(err)
-    });
+    .catch(err => console.log(err));
+
+    fetch("http://localhost:3000/api/teddies")
+    .then(res => {
+        if(res.ok) {
+            return res.json();
+        }
+    })
+    .then(value => {
+        createCartPagesElt(value);
+    })
+    .catch(err => console.log(err));
