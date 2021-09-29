@@ -5,7 +5,9 @@ orderBtn.addEventListener("click", () =>
 {
     let idBtn = orderBtn.dataset.id;
     let nameBtn = orderBtn.dataset.name;
+    let priceBtn = orderBtn.dataset.price;
     localStorage.setItem(nameBtn, idBtn);
+    localStorage.setItem(nameBtn + "price", priceBtn);
     
     if (localStorage.getItem("nbArticle")) {
         console.log(nbArticle)

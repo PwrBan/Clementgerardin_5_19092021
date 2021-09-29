@@ -23,6 +23,7 @@ function createProductHtmlElt(value)
 
     document.querySelector(".product__order").setAttribute("data-id", identifierProduct["_id"]);
     document.querySelector(".product__order").setAttribute("data-name", identifierProduct["name"]);
+    document.querySelector(".product__order").setAttribute("data-price", identifierProduct["price"]);
     imgProduct.setAttribute("src", identifierProduct["imageUrl"]);
     nameProduct.textContent = identifierProduct["name"];
     priceProduct.textContent = identifierProduct["price"] + "€";

@@ -1,18 +1,13 @@
 
 function createCartPagesElt(value){
     let keys = Object.values(localStorage);
-    console.log(keys);
     keys.forEach(key => {
         const findId = value.find(value => key === value["_id"]);
         if (findId === undefined) {
-            console.log("error");
         }
         else
         {        
-        console.log(findId);
-        console.log(key);
         let qte = localStorage.getItem("qt" + findId["name"]);
-        console.log(qte);
         let totalPriceTeddy = qte * findId["price"];
         let articleCartElt = document.createElement("article");
         let imgElt = document.createElement("img");
@@ -24,6 +19,7 @@ function createCartPagesElt(value){
         let priceElt = document.createElement("p");
         let descriptionElt = document.createElement("p");
         
+        priceElt.setAttribute("data-price", totalPriceTeddy);
         imgElt.setAttribute("alt", "Ours en peluche" + value["name"]);
         imgElt.setAttribute('src', findId["imageUrl"]);
         addBtnElt.setAttribute("onClick", "addArticle('" + findId["name"] + "')");
@@ -58,30 +54,30 @@ function createCartPagesElt(value){
         qteElt.textContent = "Quantité : " + qte;
         addBtnElt.textContent = "+";
         removeBtnElt.textContent = "-";
-
+        calucateTotalPrice(totalPriceTeddy);
         }
     });
 }
 
 
 function addArticle(name){
-    console.log(name);
     let qteTeddys = parseInt(Object.values(localStorage.getItem("qt" + name)));
+    let unitPrice = localStorage.getItem(name + "price");
     qteTeddys++;
     localStorage.setItem("qt" + name, qteTeddys);
     document.querySelector("#" + name.replaceAll(" ", "_")).textContent = "Quantité : " + qteTeddys;
-    
+    document.querySelector(".cart-elt__price").textContent = qteTeddys * unitPrice + "€";
 }
 function removeArticle(name){
     let qteTeddys = parseInt(Object.values(localStorage.getItem("qt" + name)));
+    let unitPrice = localStorage.getItem(name + "price");
     qteTeddys--;
     localStorage.setItem("qt" + name, qteTeddys);
     document.querySelector("#" + name.replaceAll(" ", "_")).textContent = "Quantité : " + qteTeddys;
+    document.querySelector(".cart-elt__price").textContent = qteTeddys * unitPrice + "€";
 }
 
 function calucateTotalPrice(totalPriceTeddy){
-    localStorage.setItem("total-price", totalPriceTeddy);
-    let x = parseInt(Object.values(localStorage.getItem("total-price")));
-    let total = totalPriceTeddy + x;
-    localStorage.setItem("total-price", total);
+
+    
 }
