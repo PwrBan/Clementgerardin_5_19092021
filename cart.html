@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/create-cart.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
     <title>Panier</title>
 </head>
@@ -21,9 +22,26 @@
             </a>
         </div>
     </header>
-
+    
     <section class="cart">
+        
+    </section>
 
+    <section class="form">
+        <form action="" method="post">
+            <input type="text" name="firstname" id="">
+            <input type="text" name="lastname">
+            <input type="date" name="birthday" id="">
+            <input type="text" name="address" id="">
+            <input type="text" name="city">
+            <input type="email" name="mail">
+            <button type="submit">Finaliser la commande</button>
+        </form>
+    </section>
+
+    <section class="resumed">
+            <h3>Prix total :</h3>
+            <p class="resumed__total-price"></p>
     </section>
 
     <footer class="footer">
@@ -32,7 +50,7 @@
         <a href="">Service Client</a>
     </footer>
 
-    <script src="js/create-cart.js"></script>
+    
     <script src="js/get-order.js"></script>
     <script src="js/fetch.js"></script>
 </body>
