@@ -1,6 +1,6 @@
 .shop
 {
-    margin: 0 5%;
+    margin: 3% 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -42,6 +42,9 @@
     }
     &__legende
     {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
         margin-top: 5px;
     }
 }

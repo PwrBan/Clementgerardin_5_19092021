@@ -1,0 +1,53 @@
+
+.product
+{
+    display: flex;
+    margin: 3% 5%;
+    &__img
+    {
+        height: 330px;
+        width: 500px;
+        object-fit: cover;
+    }
+    &__legende
+    {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 0 5% ;
+    }
+    &__name
+    {
+        align-self: flex-start;
+    }
+    &__custom
+    {
+        width: 25%;
+    }
+    &__order
+    {
+        border: none;
+        height: 40px;
+        border-radius: 20px;
+        width: 25%;
+        background: rgb(155,98,220);
+        background: linear-gradient(157deg,
+         rgba(155,98,220,1) 24%,
+         rgba(176,109,161,1) 50%, 
+         rgba(202,123,86,1) 70%);
+         color: white;
+         font-family: 'roboto', sans-serif;
+         font-weight: 600;
+         transition: all 200ms ease-out;
+         &:hover
+         {
+             transform: scale(0.90);
+             transition: all 100ms ease-in;
+             &:active
+             {
+                 transform: scale(1.10);
+             }
+         }
+         
+    }
+}

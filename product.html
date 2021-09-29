@@ -7,34 +7,39 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;600&display=swap" rel="stylesheet">
     <title>Ours en peluches</title>
 </head>
-<body>
+<body class="body__product">
     <header class="header">
         <a href="index.html"><img src="img/logo/orinoco_logo.svg" alt="logo orinoco" class="header__logo"></a>
         <input type="search" class="header__search-bar">
         <div>
             <a href="cart.html">
                 <img src="img/logo/chariot_logo.svg" alt="logo chariot d'oronico" class="header__cart">
-                <span class="panier"></span>
+                <span class="panier">0</span>
             </a>
         </div>
     </header>
 
-    <article>
+    <article class="product">
 
-        <img src="" alt="Ours en peluches" class="product__img">
-        <h1 class="product__name"></h1>
-        <em class="product__price"></em>
-        <p class="product__description"></p>
-
-        <button class="product__order" data-name data-id>Ajouter au panier</button>
+        <div><img src="" alt="Ours en peluches" class="product__img"></div>
+        <div class="product__legende">
+            <h1 class="product__name"></h1>
+            <em class="product__price"></em>
+            <select name="personnalisation" class="product__custom"></select>
+            <p class="product__description"></p>
+            <button class="product__order" data-name data-id>Ajouter au panier</button>
+        </div>
     </article>
 
-    <footer>
-        
+    <footer class="footer">
+        <a href="">Contact</a>
+        <a href="">Partenaires</a>
+        <a href="">Service Client</a>
     </footer>
+
     <script src="js/get-order.js"></script>
     <script src="js/get-order.js"></script>
     <script src="js/get-params.js"></script>

@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: space-between;
   background: white;
+  box-shadow: 2px 3px 7px grey;
 }
 .header__logo {
   align-self: flex-start;
@@ -42,7 +43,7 @@
 }
 
 .shop {
-  margin: 0 5%;
+  margin: 3% 5%;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -80,7 +81,76 @@
   transform: scale(1.15);
 }
 .article__legende {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   margin-top: 5px;
+}
+
+.product {
+  display: flex;
+  margin: 3% 5%;
+}
+.product__img {
+  height: 330px;
+  width: 500px;
+  object-fit: cover;
+}
+.product__legende {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 5%;
+}
+.product__name {
+  align-self: flex-start;
+}
+.product__custom {
+  width: 25%;
+}
+.product__order {
+  border: none;
+  height: 40px;
+  border-radius: 20px;
+  width: 25%;
+  background: #9b62dc;
+  background: linear-gradient(157deg, #9b62dc 24%, #b06da1 50%, #ca7b56 70%);
+  color: white;
+  font-family: "roboto", sans-serif;
+  font-weight: 600;
+  transition: all 200ms ease-out;
+}
+.product__order:hover {
+  transform: scale(0.9);
+  transition: all 100ms ease-in;
+}
+.product__order:hover:active {
+  transform: scale(1.1);
+}
+
+.cart {
+  margin: 5%;
+}
+
+.cart-elt {
+  display: flex;
+  margin: 3% 0;
+  width: 60%;
+}
+.cart-elt__img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+.cart-elt__legende {
+  display: flex;
+  flex-direction: column;
+  margin: 0 3%;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
 .footer {
@@ -88,7 +158,7 @@
   justify-content: space-between;
   margin-top: 3rem;
   padding: 1rem 8rem;
-  height: 8rem;
+  height: 7rem;
   background: whitesmoke;
 }
 
@@ -103,6 +173,7 @@ body {
   justify-content: center;
   background: whitesmoke;
   height: 10rem;
+  box-shadow: inset 0px 3px 6px grey;
 }
 
 h1 {

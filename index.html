@@ -18,34 +18,14 @@
         <div>
             <a href="cart.html">
                 <img src="img/logo/chariot_logo.svg" alt="logo chariot d'oronico" class="header__cart">
-                <span class="panier"></span>
+                <span class="panier">0</span>
             </a>
         </div>
     </header>
     <div class="title">
         <h1>Votre boutique spécialisé dans les ours en peluches</h1>
     </div>
-    
-    
-    <div class="filter">
-        <h2>Filtre</h2>
-        <input type="range" name="price" id="range-price" list="price">
-        <datalist id="price">
-            <option value="1000€">1000€</option>
-            <option value="1500€">1500€</option>
-        </datalist>
-        <div class="filter__color">
-            <img src="images/icon/Colorwheel.svg" alt="" class="filter__color-icon">
-            <select name="filter__color"  class="filter__color-select" id="">
-                <option value=""></option>
-                <option value="Brun">Brun</option>
-                <option value="Blanc">Blanc</option>
-                <option value="Roux">Roux</option>
-                <option value="Noir">Noir</option>
-            </select>
-        </div> 
-    </div>
-    
+        
     <section class="shop">
         
     </section>
@@ -56,6 +36,7 @@
         <a href="">Service Client</a>
     </footer>
 
+    <script src="js/get-nb-article-cart.js"></script>
     <script src="js/get-order.js"></script>
     <script src="js/fetch.js"></script>
     <script src="js/create-homepage.js"></script>
