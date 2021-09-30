@@ -1,30 +1,38 @@
-let orderBtn = document.querySelector(".product__order");
+
+
+const orderBtn = document.querySelector(".product__order");
 const cart = document.querySelector(".panier");
 let nbArticle = cart.textContent;
-orderBtn.addEventListener("click", () =>
-{
+orderBtn.addEventListener("click", () => {
+    
     let idBtn = orderBtn.dataset.id;
     let nameBtn = orderBtn.dataset.name;
     let priceBtn = orderBtn.dataset.price;
-    localStorage.setItem(nameBtn, idBtn);
-    localStorage.setItem(nameBtn + "price", priceBtn);
+    if (!localStorage.getItem(idBtn)) {
+        const teddy = new Object;
+        teddy.name = nameBtn;
+        teddy.id = idBtn;
+        teddy.price = priceBtn;
+        teddy.qte = 1;
+        teddy.totalPrice = teddy.price * teddy.qte;
+        localStorage.setItem(idBtn, JSON.stringify(teddy));
+        console.log("creation de l'objet");
+    } else {
+        let getQte = localStorage.getItem(idBtn);
+        let parse = JSON.parse(getQte);
+        parse.qte++;
+        parse.totalPrice = parse.qte * parse.price;
+        localStorage.setItem(idBtn, JSON.stringify(parse));
+    }
     
+
     if (localStorage.getItem("nbArticle")) {
         console.log(nbArticle)
         nbArticle++;
         localStorage.setItem("nbArticle", nbArticle);
-        cart.textContent = Object.values(localStorage.getItem("nbArticle"));
+        cart.textContent = localStorage.getItem("nbArticle");
     }
     else {
         localStorage.setItem("nbArticle", 1);
-    };
-    /* Condition pour gérer les doubles dans le panier*/
-    if (localStorage.getItem(nameBtn) && localStorage.getItem("qt" + nameBtn)) {
-        let qtTeddys = parseInt(Object.values(localStorage.getItem("qt" + nameBtn)));
-        qtTeddys++;
-        localStorage.setItem("qt" + nameBtn, qtTeddys);
     }
-    else {
-        localStorage.setItem("qt" + nameBtn, 1);
-    }
-})
+});

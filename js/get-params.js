@@ -10,6 +10,7 @@ fetch("http://localhost:3000/api/teddies")
     })
     .then(value => {
         createProductHtmlElt(value);
+        addArticleToLocal(value);
     })
     .catch(err => console.log(err));
 

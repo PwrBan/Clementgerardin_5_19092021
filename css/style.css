@@ -113,6 +113,7 @@
   height: 40px;
   border-radius: 20px;
   width: 25%;
+  min-width: 5rem;
   background: #9b62dc;
   background: linear-gradient(157deg, #9b62dc 24%, #b06da1 50%, #ca7b56 70%);
   color: white;
