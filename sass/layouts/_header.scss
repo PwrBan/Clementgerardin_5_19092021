@@ -12,15 +12,26 @@
         width: 150px;
         background: white;
     }
-    &__search-bar
+    &__search
     {
-        height: 35px;
-        width: 15rem;
-        border: 3px solid $color-primary;
-        border-radius: 20px;
-        margin:0 2rem 0 40%;
-        background: whitesmoke;
-        box-shadow: inset 2px 2px 5px #d6d6d6;
+        display: flex;
+        align-items: center;
+        &-bar
+        {
+            position: relative;
+            height: 35px;
+            width: 15rem;
+            border: 3px solid $color-primary;
+            border-radius: 20px;
+            background: whitesmoke;
+            box-shadow: inset 2px 2px 5px #d6d6d6;
+        }
+        &-icon
+        {
+            font-size: larger;
+            position: absolute;
+            left: 85%;
+        }
     }
     &__cart
     {
@@ -46,4 +57,16 @@
         left: 30px;
         top: 15px;
     }
+}
+.fas
+{
+    background: rgb(155,98,220);
+    background: linear-gradient(157deg, rgba(155,98,220,1) 24%, rgba(176,109,161,1) 50%, rgba(202,123,86,1) 70%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.fa-shopping-cart
+{
+    font-size: 2em;
 }

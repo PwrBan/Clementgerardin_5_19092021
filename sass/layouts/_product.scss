@@ -22,7 +22,13 @@
     }
     &__custom
     {
-        width: 25%;
+        background: rgb(155,98,220);
+        background: linear-gradient(157deg,
+         rgba(155,98,220,1) 24%,
+         rgba(176,109,161,1) 50%, 
+         rgba(202,123,86,1) 70%);
+         color: white;
+         width: 45%;
     }
     &__order
     {

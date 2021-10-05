@@ -3,7 +3,12 @@
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
-    padding: 1rem 8rem;
+    padding: 1rem 5%;
     height: 7rem;
     background: whitesmoke;
+    a
+    {
+        text-decoration: none;
+        color: black;
+    }
 }
