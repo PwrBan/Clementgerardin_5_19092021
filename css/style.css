@@ -11,14 +11,23 @@
   width: 150px;
   background: white;
 }
+.header__search {
+  display: flex;
+  align-items: center;
+}
 .header__search-bar {
+  position: relative;
   height: 35px;
   width: 15rem;
   border: 3px solid #9B62DC;
   border-radius: 20px;
-  margin: 0 2rem 0 40%;
   background: whitesmoke;
   box-shadow: inset 2px 2px 5px #d6d6d6;
+}
+.header__search-icon {
+  font-size: larger;
+  position: absolute;
+  left: 85%;
 }
 .header__cart {
   background: white;
@@ -42,6 +51,18 @@
   top: 15px;
 }
 
+.fas {
+  background: #9b62dc;
+  background: linear-gradient(157deg, #9b62dc 24%, #b06da1 50%, #ca7b56 70%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.fa-shopping-cart {
+  font-size: 2em;
+}
+
 .shop {
   margin: 3% 5%;
   display: flex;
@@ -60,7 +81,7 @@
   background: white;
 }
 .article__link {
-  margin: 5%;
+  margin: 3% 4%;
   text-decoration: none;
   color: black;
 }
@@ -70,9 +91,7 @@
   overflow: hidden;
 }
 .article__img {
-  margin: 5px;
   height: 150px;
-  width: 200px;
   object-fit: fill;
   transition: all 400ms ease-in-out;
   transform: scale(1);
@@ -84,7 +103,17 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-top: 5px;
+  width: 95%;
+}
+.article__name {
+  margin-block-end: 0.5em;
+  font-family: "Source Code Pro";
+  font-weight: 400;
+}
+.article__price {
+  margin-block-start: 0.5em;
+  font-weight: 400;
+  color: #626161;
 }
 
 .product {
@@ -106,7 +135,10 @@
   align-self: flex-start;
 }
 .product__custom {
-  width: 25%;
+  background: #9b62dc;
+  background: linear-gradient(157deg, #9b62dc 24%, #b06da1 50%, #ca7b56 70%);
+  color: white;
+  width: 45%;
 }
 .product__order {
   border: none;
@@ -129,6 +161,10 @@
   transform: scale(1.1);
 }
 
+.main {
+  display: flex;
+}
+
 .cart {
   margin: 5%;
 }
@@ -136,7 +172,7 @@
 .cart-elt {
   display: flex;
   margin: 3% 0;
-  width: 60%;
+  width: 55%;
 }
 .cart-elt__img {
   height: 200px;
@@ -149,23 +185,36 @@
   margin: 0 3%;
 }
 
+.section-form {
+  display: flex;
+  flex-direction: column;
+  margin: 10% 5%;
+}
+
 .form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-self: center;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   margin-top: 3rem;
-  padding: 1rem 8rem;
+  padding: 1rem 5%;
   height: 7rem;
   background: whitesmoke;
+}
+.footer a {
+  text-decoration: none;
+  color: black;
 }
 
 body {
   margin: 0;
   background: white;
+  font-family: "roboto", sans-serif;
 }
 
 .title {

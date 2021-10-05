@@ -1,3 +1,8 @@
+.main
+{
+    display: flex;
+
+}
 .cart
 {
     margin: 5%;
@@ -6,7 +11,7 @@
 {
     display: flex;
     margin: 3% 0;
-    width: 60%;
+    width: 55%;
     &__img
     {
         height: 200px;
@@ -20,8 +25,16 @@
         margin: 0 3%;
     }
 }
+.section-form
+{
+    display: flex;
+    flex-direction: column;
+    margin: 10% 5%;
+}
 .form
 {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-self: center;
 }
