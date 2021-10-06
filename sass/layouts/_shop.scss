@@ -4,7 +4,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    background: whitesmoke;
+    background: $color-background;
 }
 .article
 {
@@ -14,7 +14,7 @@
     align-items: center;
     height: 15rem;
     width: 21rem;
-    box-shadow: 2px 2px 5px #d6d6d6;
+    box-shadow: 2px 2px 5px #aeacae;
     background: white;
     &__link
     {

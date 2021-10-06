@@ -1,8 +1,5 @@
-
-
 const orderBtn = document.querySelector(".product__order");
 const cart = document.querySelector(".panier");
-let nbArticle = cart.textContent;
 orderBtn.addEventListener("click", () => {
     
     let idBtn = orderBtn.dataset.id;
@@ -24,16 +21,5 @@ orderBtn.addEventListener("click", () => {
         parse.qte++;
         parse.totalPrice = parse.qte * parse.price;
         localStorage.setItem(idBtn, JSON.stringify(parse));
-    }
-    
-
-    if (localStorage.getItem("nbArticle")) {
-        console.log(nbArticle)
-        nbArticle++;
-        localStorage.setItem("nbArticle", nbArticle);
-        cart.textContent = localStorage.getItem("nbArticle");
-    }
-    else {
-        localStorage.setItem("nbArticle", 1);
     }
 });

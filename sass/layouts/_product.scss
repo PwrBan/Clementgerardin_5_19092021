@@ -6,7 +6,7 @@
     &__img
     {
         height: 330px;
-        width: 500px;
+        width: 100%;
         object-fit: cover;
     }
     &__legende
@@ -29,5 +29,21 @@
          rgba(202,123,86,1) 70%);
          color: white;
          width: 45%;
+    }
+    @media (max-width: 680px) {
+        flex-direction: column;
+    }
+}
+
+.resumed
+{
+    display: flex;
+    flex-direction: column;
+    background: $color-background;
+    align-items: flex-start;
+    padding: 0 5%;
+    .resumed__total-price
+    {
+        margin-block-end: 0.5em;
     }
 }

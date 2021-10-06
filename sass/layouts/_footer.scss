@@ -4,11 +4,16 @@
     justify-content: space-between;
     margin-top: 3rem;
     padding: 1rem 5%;
-    height: 7rem;
-    background: whitesmoke;
+    height: 8rem;
+    background: $color-background;
     a
     {
         text-decoration: none;
         color: black;
+    }
+    &__contact
+    {
+        display: flex;
+        flex-direction: column;
     }
 }

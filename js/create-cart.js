@@ -66,33 +66,29 @@ function createCartPagesElt(value){
         qteElt.textContent = "Quantité : " + qte;
         addBtnElt.textContent = "+";
         removeBtnElt.textContent = "-";
-        document.querySelector(".resumed__total-price").textContent = totalPriceArray.reduce(reducer) + "€";
+        document.querySelector(".resumed__total-price").textContent = "Prix total : " + totalPriceArray.reduce(reducer) + "€";
         getIdProducts(teddy.id);
         }
         
     });
 }
 
- 
-
 function addArticle(id){
     console.log(totalPriceArray);
     let getQte = localStorage.getItem(id);
     let parse = JSON.parse(getQte);
     const findIndex = totalPriceArray.indexOf(parse.totalPrice);
-    console.log(findIndex);
     let teddyName = parse.name.replaceAll(' ', '_')
-        parse.qte++;  
+        parse.qte++; 
     parse.totalPrice = parse.qte * parse.price;
+    localStorage.setItem("nbArticle", nbArticle);
     totalPriceArray.splice(findIndex, 1, parse.totalPrice);
-    console.log(totalPriceArray);
     localStorage.setItem(id, JSON.stringify(parse));
     document.querySelector("#" + teddyName).textContent = "Quantité : " + parse.qte;
     document.querySelector("#" + teddyName + "Price").textContent = parse.totalPrice + "€";
-    document.querySelector(".resumed__total-price").textContent = totalPriceArray.reduce(reducer) + "€";
-    
-
+    document.querySelector(".resumed__total-price").textContent =  "Prix total : " + totalPriceArray.reduce(reducer) + "€";
 }
+
 function removeArticle(id){
     let getQte = localStorage.getItem(id);
     let parse = JSON.parse(getQte);
@@ -104,13 +100,12 @@ function removeArticle(id){
     localStorage.setItem(id, JSON.stringify(parse));
     document.querySelector("#" + teddyName).textContent = "Quantité : " + parse.qte;
     document.querySelector("#" + teddyName + "Price").textContent = parse.totalPrice + "€";
-    document.querySelector(".resumed__total-price").textContent = totalPriceArray.reduce(reducer) + "€";
+    document.querySelector(".resumed__total-price").textContent =  "Prix total : " + totalPriceArray.reduce(reducer) + "€";
     if (parse.qte == 0) {
         localStorage.removeItem(id);
         const parentNode = document.querySelector(".cart");
         const childNode = document.querySelector("#" + parse.name + "Article");
         parentNode.removeChild(childNode);
-        console.log(test);
+
     }
-    console.log(totalPriceArray);
 }

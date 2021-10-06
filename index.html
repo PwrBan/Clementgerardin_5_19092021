@@ -20,9 +20,8 @@
         <img src="img/logo/logo_complet.png" alt="logo orinoco" class="header__logo">
         <div class="header__search"><input type="search" class="header__search-bar"><i class="fas fa-search header__search-icon"></i></div>
         <div>
-            <a href="cart.html">
+            <a href="cart.html" class="header__cart-icon">
                 <i class="fas fa-shopping-cart"></i>
-                <span class="panier">0</span>
             </a>
         </div>
     </header>
@@ -35,12 +34,16 @@
     </section>
 
     <footer class="footer">
-        <a href="">Contact</a>
+        <div class="footer__contact">
+            <a href="">Contact</a>
+            <i class="fab fa-twitter fa-2x"></i>
+            <i class="fab fa-facebook fa-2x"></i>
+        </div>
+        
         <a href="">Partenaires</a>
         <a href="">Service Client</a>
     </footer>
 
-    <script src="js/get-nb-article-cart.js"></script>
     <script src="js/get-order.js"></script>
     <script src="js/fetch.js"></script>
     <script src="js/create-homepage.js"></script>
