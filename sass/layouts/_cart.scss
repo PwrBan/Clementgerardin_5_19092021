@@ -6,12 +6,17 @@
 .cart
 {
     margin: 5%;
+    &__title
+    {
+        display: flex;
+        justify-content: flex-start;
+        font-size: 2em;
+    }
 }
 .cart-elt
 {
     display: flex;
     margin: 3% 0;
-    width: 55%;
     &__img
     {
         height: 200px;
@@ -24,17 +29,13 @@
         flex-direction: column;
         margin: 0 3%;
     }
-}
-.section-form
-{
-    display: flex;
-    flex-direction: column;
-    margin: 10% 5%;
-}
-.form
-{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-self: center;
+    &__qte-elt
+    {
+        display: flex;
+        align-items: center;
+    }
+    &__qte
+    {
+        padding-right: 10px;
+    }
 }

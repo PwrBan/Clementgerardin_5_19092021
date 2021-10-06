@@ -12,7 +12,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 15rem;
+    height: 15rem;
+    width: 21rem;
     box-shadow: 2px 2px 5px #d6d6d6;
     background: white;
     &__link
@@ -30,7 +31,8 @@
     &__img
     {
         height: 150px;
-        object-fit: fill;
+        width: 21rem;
+        object-fit: cover;
         transition: all 400ms ease-in-out;
         transform: scale(1);
         &:hover
@@ -47,9 +49,13 @@
     }
     &__name
     {
-        margin-block-end: .5em;
+        margin-block-end: 0;
         font-family: 'Source Code Pro';
         font-weight: 400;
+        &:hover
+        {
+            color: $color-primary;
+        }
     }
     &__price
     {

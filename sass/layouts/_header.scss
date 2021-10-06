@@ -70,3 +70,13 @@
 {
     font-size: 2em;
 }
+.teddy-icon
+{
+    position: absolute;
+    transform: translateY(-50px);
+    transition: all 300ms;
+}
+.product__order:active .teddy-icon
+{
+    transform: translateY(0px);
+}

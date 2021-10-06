@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@200;300;400;600&display=swap" rel="stylesheet">
     <title>Ours en peluches</title>
 </head>
 <body class="body__product">
     <header class="header">
-        <a href="index.html"><img src="img/logo/orinoco_logo.svg" alt="logo orinoco" class="header__logo"></a>
-        <input type="search" class="header__search-bar">
+        <a href="index.html"><img src="img/logo/logo_complet.png" alt="logo orinoco" class="header__logo"></a>
+        <div class="header__search"><input type="search" class="header__search-bar"><i class="fas fa-search header__search-icon"></i></div>
         <div>
             <a href="cart.html">
-                <img src="img/logo/chariot_logo.svg" alt="logo chariot d'oronico" class="header__cart">
+                <img src="img/icon/teddy-icon.png" alt="icon ours" class="teddy-icon">
+                <i class="fas fa-shopping-cart"></i>
                 <span class="panier">0</span>
             </a>
         </div>
@@ -33,7 +35,7 @@
 
             </fieldset>
             <p class="product__description"></p>
-            <button class="product__order" data-name data-id>Ajouter au panier</button>
+            <button class="product__order btn" data-name data-id>Ajouter au panier</button>
         </div>
     </article>
 
@@ -43,7 +45,6 @@
         <a href="">Service Client</a>
     </footer>
 
-    <script src="js/get-order.js"></script>
     <script src="js/get-order.js"></script>
     <script src="js/get-params.js"></script>
 </body>

@@ -1,0 +1,25 @@
+.section-form
+{
+    width: 50%;
+    height: 35rem;
+    background: whitesmoke;
+    display: flex;
+    flex-direction: column;
+    margin: 10% 5%;
+}
+.form
+{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    padding: 5% 0;
+   &__input
+   {
+       width: 13rem;
+       margin: 5% 0;
+       padding: 3% 0;
+       border-radius: 20px;
+   }
+}
