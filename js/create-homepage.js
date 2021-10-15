@@ -22,16 +22,17 @@ function createHomepageHtmlElt(value) {
         imgElt.setAttribute('src', element["imageUrl"]);
         linkElt.setAttribute("href", "product.html?id=" + element["_id"]);
                 
-        shopElt.appendChild(linkElt);
-        linkElt.appendChild(articleElt);
-        articleElt.appendChild(divImgElt);
+        
+        shopElt.appendChild(articleElt);
+        articleElt.appendChild(linkElt);
+        linkElt.appendChild(divImgElt);
         divImgElt.appendChild(imgElt);
-        articleElt.appendChild(divElt);
+        linkElt.appendChild(divElt);
         divElt.appendChild(h2Elt);
         divElt.appendChild(priceElt);    
 
         h2Elt.textContent = element["name"];
-        priceElt.textContent = element["price"] + "€";
+        priceElt.textContent = element["price"] / 100 + "€";
     });
 }
 

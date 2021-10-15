@@ -17,6 +17,6 @@ fetch("http://localhost:3000/api/teddies")
         }
     })
     .then(value => {
-        createCartPagesElt(value);
+        createCartHtmlElt(value);
     })
     .catch(err => console.log(err));

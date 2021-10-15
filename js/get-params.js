@@ -14,6 +14,7 @@ fetch("http://localhost:3000/api/teddies")
     })
     .catch(err => console.log(err));
 
+/*Recupere l'id qui se trouve dans l'URL afin d'identifier le produit souhaite*/
 function createProductHtmlElt(value)
 {
     const identifierProduct = value.find(value => value._id === idProduct);
@@ -23,23 +24,17 @@ function createProductHtmlElt(value)
     const descriptionProduct = document.querySelector(".product__description");
     const customProduct = document.querySelector(".product__custom")
     for (const key of identifierProduct.colors) {
-        let labelCheckboxElt = document.createElement("label");
-        let checkboxElt = document.createElement("input");
-        labelCheckboxElt.setAttribute("id", key);
-        checkboxElt.setAttribute("id", key)
-        checkboxElt.setAttribute("type", "radio")
-        checkboxElt.setAttribute("value", key);
-        checkboxElt.setAttribute("name", "custom")
-
-        customProduct.appendChild(checkboxElt);
-        customProduct.appendChild(labelCheckboxElt);
-        labelCheckboxElt.textContent = key;
+        let labelOptionsElt = document.createElement("option");
+        labelOptionsElt.setAttribute("value", key)
+        labelOptionsElt.setAttribute("id", key);
+        customProduct.appendChild(labelOptionsElt);
+        labelOptionsElt.textContent = key;
     }
     document.querySelector(".product__order").setAttribute("data-id", identifierProduct["_id"]);
     document.querySelector(".product__order").setAttribute("data-name", identifierProduct["name"]);
-    document.querySelector(".product__order").setAttribute("data-price", identifierProduct["price"]);
+    document.querySelector(".product__order").setAttribute("data-price", identifierProduct["price"] / 100);
     imgProduct.setAttribute("src", identifierProduct["imageUrl"]);
     nameProduct.textContent = identifierProduct["name"];
-    priceProduct.textContent = identifierProduct["price"] + "€";
+    priceProduct.textContent = identifierProduct["price"] / 100 + "€";
     descriptionProduct.textContent = identifierProduct["description"];    
 }

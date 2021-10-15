@@ -15,26 +15,12 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="header">
-        <a href="index.html"><img src="img/logo/logo_complet.png" alt="logo orinoco" class="header__logo"></a>
-        <div class="header__search"><input type="search" class="header__search-bar"><i class="fas fa-search header__search-icon"></i></div>
-        <div>
-            <a href="cart.html">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
-        </div>
-    </header>
 
-        <section>
-            <p>Commande confirmée, l'equipe d'Orinoco vous remercie pour votre achat <span class="prenom"></span>, voici votre numero de commande <span class="n-order"></span></p>
+        <section class="confirmed-order">
+            <p>Commande confirmée, l'equipe d'Orinoco vous remercie pour votre achat <span class="prenom"></span>, voici votre numero de commande <span class="n-order"></span>.</p>
+            <button onclick= "window.location.href = 'index.html';" class="btn">Retourner a l'accueil</button>
         </section>
         
-    <footer class="footer">
-        <a href="">Contact</a>
-        <a href="">Partenaires</a>
-        <a href="">Service Client</a>
-    </footer>
-
     <script src="js/confirmed-order.js"></script>
     
 </body>

@@ -40,19 +40,24 @@
         background: white;
     }
     @media (max-width: 520px) {
-        height: 7rem;
         flex-direction: column;
+        padding: 5px 30px;
         &__logo
         {
             order: 1;
-            align-self: center;
         }
-        &__cart-icon .fas
+        &__icon-cart .fas
         {
             order: 2;
             position: absolute;
             right: 5%;
             top: 11%;
+        }
+        &__icon-user
+        {
+            position: absolute;
+            right: 5%;
+            margin-top: 4%;
         }
         &__search
         {
@@ -66,8 +71,35 @@
             }
         }
     }
+        @media (max-width: 255px ) {
+        flex-direction: column;
+        padding: 5px 30px;
+        &__logo
+        {
+            order: 1;
+        }
+        &__icon
+        {
+            order: 2;
+            margin: 10px 0;
+            &-cart .fas
+            {
+                position: unset;
+            }
+            &-user
+            {
+                position: unset;
+            }
+        }
+        &__search
+        {
+            order: 3;
+            align-self: flex-start;
+            padding-bottom: 10px;
+        }
+    }
 }
-.fas
+.fas, .fab
 {
     background: rgb(155,98,220);
     background: linear-gradient(157deg, rgba(155,98,220,1) 24%, rgba(176,109,161,1) 50%, rgba(202,123,86,1) 70%);
@@ -78,6 +110,7 @@
 .fa-shopping-cart
 {
     font-size: 2em;
+    padding-left: 20px;
 }
 .teddy-icon
 {

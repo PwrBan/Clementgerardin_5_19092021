@@ -12,7 +12,7 @@ orderBtn.addEventListener("click", () => {
         teddy.price = priceBtn;
         teddy.qte = 1;
         teddy.totalPrice = teddy.price * teddy.qte;
-        teddy.colors = document.querySelector('input[name="custom"]:checked').value
+        teddy.colors = document.querySelector('.product__custom').value
         localStorage.setItem(idBtn, JSON.stringify(teddy));
         console.log("creation de l'objet");
     } else {

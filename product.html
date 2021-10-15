@@ -14,10 +14,14 @@
 </head>
 <body class="body__product">
     <header class="header">
-        <a href="index.html"><img src="img/logo/logo_complet.png" alt="logo orinoco" class="header__logo"></a>
-        <div class="header__search"><input type="search" class="header__search-bar"><i class="fas fa-search header__search-icon"></i></div>
-        <div>
-            <a href="cart.html" class="header__cart-icon">
+        <img src="img/logo/logo_complet.png" alt="logo orinoco" class="header__logo">
+        <div class="header__search">
+            <input type="search" class="header__search-bar"
+            ><i class="fas fa-search header__search-icon"></i>
+        </div>
+        <div class="header__icon">
+            <i class="fas fa-user-circle fa-2x header__icon-user"></i>
+            <a href="cart.html" class="header__icon-cart">
                 <i class="fas fa-shopping-cart"></i>
             </a>
         </div>
@@ -29,18 +33,33 @@
         <div class="product__legende">
             <h1 class="product__name"></h1>
             <em class="product__price"></em>
-            <fieldset class="product__custom">
+            <select class="product__custom">
 
-            </fieldset>
+            </select>
             <p class="product__description"></p>
             <button class="product__order btn" data-name data-id>Ajouter au panier</button>
         </div>
     </article>
 
     <footer class="footer">
-        <a href="">Contact</a>
-        <a href="">Partenaires</a>
-        <a href="">Service Client</a>
+        <div class="footer__contact">
+            <h3>Nous suivre</h3>
+            <i class="fab fa-twitter fa-2x"></i>
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-tumblr-square fa-2x"></i>
+        </div>
+        <div class="footer__a-propos">
+            <h3>A propos</h3>
+            <a href="">Conditions générales de vente</a>
+            <a href="">Fonctionnement du site</a>
+            <a href="">Données et confidentialité</a>
+        </div>
+        <div class="footer__assistance">
+            <h3>Assistance</h3>
+            <a href="">Centre d'aide</a>
+            <a href="">Nous contacter</a>
+        </div>
+        
     </footer>
 
     <script src="js/get-order.js"></script>

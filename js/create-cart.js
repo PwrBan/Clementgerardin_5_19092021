@@ -1,27 +1,25 @@
 let totalPriceArray = [];
 const reducer = (a,b) => a + b;
 
-function createCartPagesElt(value){
+function createCartHtmlElt(value){
     let keys = Object.keys(localStorage);
-    console.log(keys)
     keys.forEach(key => {
         const findId = value.find(value => key === value["_id"]);
         if (findId) {
-        
-        let teddy = JSON.parse(localStorage.getItem(findId._id));
-        let teddyName = teddy.name.replaceAll(' ', '_')
-        let qte = teddy.qte;
-        let totalPriceTeddy = qte * teddy.price;
-        let articleCartElt = document.createElement("article");
-        let imgElt = document.createElement("img");
-        let divLegendeElt = document.createElement("div");
-        let h2NameElt = document.createElement("h2");
-        let divQteElt = document.createElement("div");
-        let qteElt = document.createElement("p");
-        let addBtnElt = document.createElement("button");
-        let removeBtnElt = document.createElement("button");
-        let priceElt = document.createElement("p");
-        let descriptionElt = document.createElement("p");
+        const teddy = JSON.parse(localStorage.getItem(findId._id));
+        const teddyName = teddy.name.replaceAll(' ', '_')
+        const qte = teddy.qte;
+        const totalPriceTeddy = qte * teddy.price;
+        const articleCartElt = document.createElement("article");
+        const imgElt = document.createElement("img");
+        const divLegendeElt = document.createElement("div");
+        const h2NameElt = document.createElement("h2");
+        const divQteElt = document.createElement("div");
+        const qteElt = document.createElement("p");
+        const addBtnElt = document.createElement("button");
+        const removeBtnElt = document.createElement("button");
+        const priceElt = document.createElement("p");
+        const descriptionElt = document.createElement("p");
         
         articleCartElt.setAttribute("id", teddy.name + "Article");
         priceElt.setAttribute("data-price", totalPriceTeddy);
@@ -41,9 +39,9 @@ function createCartPagesElt(value){
         h2NameElt.classList.add("cart-elt__name");
         qteElt.classList.add("cart-elt__qte");
         addBtnElt.classList.add("cart-elt__add");
-        addBtnElt.classList.add("btnQte");
+        addBtnElt.classList.add("btn");
         removeBtnElt.classList.add("cart-elt___remove");
-        removeBtnElt.classList.add("btnQte");
+        removeBtnElt.classList.add("btn");
         priceElt.classList.add("cart-elt__price");
         descriptionElt.classList.add("cart-elt__description");
 
@@ -53,13 +51,12 @@ function createCartPagesElt(value){
         divLegendeElt.appendChild(h2NameElt);
         divLegendeElt.appendChild(divQteElt);
         divQteElt.appendChild(qteElt);
-        divQteElt.appendChild(addBtnElt);
         divQteElt.appendChild(removeBtnElt);
+        divQteElt.appendChild(addBtnElt);
         divLegendeElt.appendChild(priceElt);
         divLegendeElt.appendChild(descriptionElt);
 
         totalPriceArray.push(teddy.totalPrice);
-        console.log(totalPriceArray);
         h2NameElt.textContent = teddy.name;
         priceElt.textContent = totalPriceTeddy + "€";
         descriptionElt.textContent = findId.description;
@@ -73,15 +70,13 @@ function createCartPagesElt(value){
     });
 }
 
-function addArticle(id){
-    console.log(totalPriceArray);
+function addArticle(id) {
     let getQte = localStorage.getItem(id);
     let parse = JSON.parse(getQte);
     const findIndex = totalPriceArray.indexOf(parse.totalPrice);
-    let teddyName = parse.name.replaceAll(' ', '_')
-        parse.qte++; 
+    const teddyName = parse.name.replaceAll(' ', '_');
+    parse.qte++; 
     parse.totalPrice = parse.qte * parse.price;
-    localStorage.setItem("nbArticle", nbArticle);
     totalPriceArray.splice(findIndex, 1, parse.totalPrice);
     localStorage.setItem(id, JSON.stringify(parse));
     document.querySelector("#" + teddyName).textContent = "Quantité : " + parse.qte;
@@ -89,13 +84,13 @@ function addArticle(id){
     document.querySelector(".resumed__total-price").textContent =  "Prix total : " + totalPriceArray.reduce(reducer) + "€";
 }
 
-function removeArticle(id){
+function removeArticle(id) {
     let getQte = localStorage.getItem(id);
     let parse = JSON.parse(getQte);
     const findIndex = totalPriceArray.indexOf(parse.totalPrice);
-    let teddyName = parse.name.replaceAll(' ', '_')
-        parse.qte--;
-        parse.totalPrice = parse.qte * parse.price;
+    let teddyName = parse.name.replaceAll(' ', '_');
+    parse.qte--;
+    parse.totalPrice = parse.qte * parse.price;
     totalPriceArray.splice(findIndex, 1, parse.totalPrice);
     localStorage.setItem(id, JSON.stringify(parse));
     document.querySelector("#" + teddyName).textContent = "Quantité : " + parse.qte;
