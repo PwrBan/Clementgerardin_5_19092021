@@ -33,16 +33,3 @@
         flex-direction: column;
     }
 }
-
-.resumed
-{
-    display: flex;
-    flex-direction: column;
-    background: $color-background;
-    align-items: flex-start;
-    padding: 0 5%;
-    .resumed__total-price
-    {
-        margin-block-end: 0.5em;
-    }
-}
