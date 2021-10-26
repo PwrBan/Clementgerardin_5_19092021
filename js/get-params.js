@@ -2,39 +2,37 @@ const queryString = window.location.search;
 const urlParams = new URLSearchParams(queryString);
 const idProduct = urlParams.get('id');
 
-fetch("http://localhost:3000/api/teddies")
+fetch("http://localhost:3000/api/teddies/" + idProduct)
     .then(res => {
         if(res.ok) {
             return res.json();
         }
     })
-    .then(value => {
-        createProductHtmlElt(value);
-        addArticleToLocal(value);
+    .then(teddy => {
+        createProductHtmlElt(teddy);
     })
     .catch(err => console.log(err));
 
 /*Recupere l'id qui se trouve dans l'URL afin d'identifier le produit souhaite*/
-function createProductHtmlElt(value)
+function createProductHtmlElt(teddy)
 {
-    const identifierProduct = value.find(value => value._id === idProduct);
     const imgProduct = document.querySelector(".product__img");
     const nameProduct = document.querySelector(".product__name");
     const priceProduct = document.querySelector(".product__price");
     const descriptionProduct = document.querySelector(".product__description");
     const customProduct = document.querySelector(".product__custom")
-    for (const key of identifierProduct.colors) {
+    for (const key of teddy.colors) {
         let labelOptionsElt = document.createElement("option");
-        labelOptionsElt.setAttribute("value", key)
+        labelOptionsElt.setAttribute("teddy", key)
         labelOptionsElt.setAttribute("id", key);
         customProduct.appendChild(labelOptionsElt);
         labelOptionsElt.textContent = key;
     }
-    document.querySelector(".product__order").setAttribute("data-id", identifierProduct["_id"]);
-    document.querySelector(".product__order").setAttribute("data-name", identifierProduct["name"]);
-    document.querySelector(".product__order").setAttribute("data-price", identifierProduct["price"] / 100);
-    imgProduct.setAttribute("src", identifierProduct["imageUrl"]);
-    nameProduct.textContent = identifierProduct["name"];
-    priceProduct.textContent = identifierProduct["price"] / 100 + "€";
-    descriptionProduct.textContent = identifierProduct["description"];    
+    document.querySelector(".product__order").setAttribute("data-id", teddy._id);
+    document.querySelector(".product__order").setAttribute("data-name", teddy.name);
+    document.querySelector(".product__order").setAttribute("data-price", teddy.price / 100);
+    imgProduct.setAttribute("src", teddy.imageUrl);
+    nameProduct.textContent = teddy.name;
+    priceProduct.textContent = teddy.price / 100 + "€";
+    descriptionProduct.textContent = teddy.description;    
 }

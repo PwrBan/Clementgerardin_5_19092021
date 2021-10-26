@@ -6,6 +6,7 @@ function createCartHtmlElt(value){
     keys.forEach(key => {
         const findId = value.find(value => key === value["_id"]);
         if (findId) {
+        
         const teddy = JSON.parse(localStorage.getItem(findId._id));
         const teddyName = teddy.name.replaceAll(' ', '_')
         const qte = teddy.qte;
@@ -19,7 +20,6 @@ function createCartHtmlElt(value){
         const addBtnElt = document.createElement("button");
         const removeBtnElt = document.createElement("button");
         const priceElt = document.createElement("p");
-        const descriptionElt = document.createElement("p");
         
         articleCartElt.setAttribute("id", teddy.name + "Article");
         priceElt.setAttribute("data-price", totalPriceTeddy);
@@ -43,7 +43,6 @@ function createCartHtmlElt(value){
         removeBtnElt.classList.add("cart-elt___remove");
         removeBtnElt.classList.add("btn");
         priceElt.classList.add("cart-elt__price");
-        descriptionElt.classList.add("cart-elt__description");
 
         document.querySelector(".cart").appendChild(articleCartElt);
         articleCartElt.appendChild(imgElt);
@@ -54,12 +53,10 @@ function createCartHtmlElt(value){
         divQteElt.appendChild(removeBtnElt);
         divQteElt.appendChild(addBtnElt);
         divLegendeElt.appendChild(priceElt);
-        divLegendeElt.appendChild(descriptionElt);
 
         totalPriceArray.push(teddy.totalPrice);
         h2NameElt.textContent = teddy.name;
         priceElt.textContent = totalPriceTeddy + "€";
-        descriptionElt.textContent = findId.description;
         qteElt.textContent = "Quantité : " + qte;
         addBtnElt.textContent = "+";
         removeBtnElt.textContent = "-";
