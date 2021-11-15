@@ -1,0 +1,75 @@
+@import "./utils/_variables.scss";
+@import "./components/_btn.scss";
+@import "./layouts/_header.scss";
+@import "./layouts/_shop.scss";
+@import "./layouts/_product.scss";
+@import "./layouts/_form.scss";
+@import "./layouts/_cart.scss";
+@import "./layouts/_footer.scss";
+
+body
+{
+    margin: 0;
+    background: white;
+    font-family: 'roboto', sans-serif;
+}
+.title
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: whitesmoke;
+    box-shadow: inset 0px 3px 6px grey;
+    padding: 0 5%;
+    h1
+    {
+        text-align: center;
+    }
+}
+h1
+{
+   font-family: 'roboto', sans-serif;
+   background: rgb(155,98,220);
+   background: linear-gradient(157deg, rgba(155,98,220,1) 24%, rgba(176,109,161,1) 50%, rgba(202,123,86,1) 70%);
+   background-clip: text;
+   -webkit-background-clip: text;
+   color: transparent;
+   display: flex;
+   justify-content: center;
+   margin: 2rem 0;
+}
+.filter
+{
+    display: flex;
+    align-items: center;
+    background: white;
+    height: 100px;
+    margin: 5%;
+    &__color
+    {
+        background: inherit;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+       &-select
+       {
+        height: 30px;
+       }
+       &-icon
+       {
+           height: 30px;
+           width: 30px;
+           background: transparent;
+       }
+    }
+}
+.confirmed-order
+{
+    text-align: center;
+    margin-top: 10%;
+    font-size: larger;
+}
+.n-order
+{
+    font-weight: bold;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="js/create-cart.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <title>Panier</title>
+</head>
+<body>
+    <header class="header">
+        <a href="index.html"><img src="img/logo/logo_complet.png" alt="logo orinoco" class="header__logo"></a>
+        <div class="header__search">
+            <input type="search" class="header__search-bar"
+            ><i class="fas fa-search header__search-icon"></i>
+        </div>
+        <div class="header__icon">
+            <a href="#"><i class="fas fa-user-circle fa-2x header__icon-user"></i></a>
+            <a href="cart.html" class="header__icon-cart">
+                <i class="fas fa-shopping-cart"></i>
+            </a>
+        </div>
+    </header>
+    
+    <section class="main">
+    <div class="cart">
+        <h1 class="cart__title">Votre panier :</h1>
+    </div>
+
+    <div class="section-form">
+        <h2>Formulaire de commande :</h2>
+        <form class="form" method="POST">
+            <input type="text" name="firstname" id="firstName" class="form__input" placeholder="Prénom" required><br>
+            <input type="text" name="lastname" id="lastName" class="form__input" placeholder="Nom de famille" required><br>
+            <input type="text" name="address" id="address" class="form__input" placeholder="Adresse" required><br>
+            <input type="text" name="city"  id="city" class="form__input" placeholder="Ville" required><br>
+            <input type="email" name="mail" id="mail" class="form__input" placeholder="E-mail" required><br>
+            <button type="button" onClick="getInfoForm()" class="btn btn__command">Finaliser la commande</button>
+        </form>
+    </div>
+
+    
+    </section>
+    <section class="resumed">
+        <h3 class="resumed__total-price">0</h3>
+        <p>Frais de livraison : Offert</p>
+        
+    </section>
+
+    <footer class="footer">
+        <div class="footer__contact">
+            <h3>Nous suivre</h3>
+            <i class="fab fa-twitter fa-2x"></i>
+            <i class="fab fa-facebook fa-2x"></i>
+            <i class="fab fa-tumblr-square fa-2x"></i>
+        </div>
+        <div class="footer__a-propos">
+            <h3>A propos</h3>
+            <a href="">Conditions générales de vente</a>
+            <a href="">Fonctionnement du site</a>
+            <a href="">Données et confidentialité</a>
+        </div>
+        <div class="footer__assistance">
+            <h3>Assistance</h3>
+            <a href="">Centre d'aide</a>
+            <a href="">Nous contacter</a>
+        </div>
+        
+    </footer>
+
+    <script src="js/index.js"></script>
+    <script src="js/create-cart.js"></script>
+    <script src="js/get-form.js"></script>
+    
+
+</body>
+</html>
